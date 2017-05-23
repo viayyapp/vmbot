@@ -1,6 +1,7 @@
 /*eslint-env jquery, browser*/
 $(function(){
 	console.log("inside js function");
+	document.getElementsByClassName('time')[0].innerHTML = new Date().toLocaleString();
 	var sentHead = "<div class='row' style='margin: 5px 0px;'> <div class='col-sm-offset-4 col-sm-8 text-right' '> <div class='sent text-left' >";
 	var receivedHead = "<div class='row' style='margin: 5px 0px;'> <div class='col-sm-8 text-left' '> <div class='received text-left' >";
 	var receivedHeadError = "<div class='row' style='margin: 5px 0px;'> <div class='col-sm-8 text-left' '> <div class='received text-left' id='yellow' >";
@@ -27,9 +28,9 @@ $.post("/",data,function(res,err){
 				$(".chatdiv").animate({ scrollTop: $(".chatdiv").prop("scrollHeight")}, 1000);
 			} else { 
 			//console.log("inside post1")
-			console.log(err);
+			// console.log(err);
 			var spl = res.split('I might need');
-			console.log(spl);
+			// console.log(spl);
 			if(spl.length > 1) {
 				$(receivedHeadError+res+tail).hide().appendTo(".chatdiv").show("puff", {times : 3}, 200);
 

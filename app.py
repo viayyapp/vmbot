@@ -57,8 +57,10 @@ def main_page():
 		json_data = {}
 		script3 = """<html></html>"""
 		url=""
+		print(response['output']['nodes_visited'][0])	
 		if str(response['output']['nodes_visited'][0]) == 'customer_detail' or str(response['output']['nodes_visited'][0]) == 'customer_detail2':
 			try:
+				print(response['entities'][0]['value']);
 				cust_detail = str(response['entities'][0]['value'])
 				print("customer details="+cust_detail)
 				url = 'https://ehnsarmecmpre01.extnet.ibm.com/api.php?query=%s'%cust_detail

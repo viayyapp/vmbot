@@ -11,21 +11,29 @@
 		}
 		
 		body {
-			background-color: #edeff2;
+			/*background: url("static/img/5-sec-faces.jpg");*/
 			font-family: "Calibri", "Roboto", sans-serif;
+		}
+		.body-overlay {
+			opacity: 0.3;
+			position: absolute;
+			background: #FFF;
+			width: 100%;
+			height: 100%;
+
 		}
 		.chat_window {
 			position: absolute;
 			width: calc(100% - 20px);
 			max-width: 800px;
-			height: 550px;
+			/*height: 550px;*/
 			border-radius: 0px;
 			background-color: #fff;
 			left: 50%;
 			top: 50%;
 			transform: translateX(-50%) translateY(-50%);
 			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-			overflow: hidden;
+			/*overflow: hidden;*/
 		}
 		
 		.top_menu {
@@ -141,7 +149,7 @@
 			width: 100%;
 			background-color: #fff;
 			padding: 10px 10px;
-			position: absolute;
+			/*position: absolute;*/
 			bottom: 0;
 		}
 		
@@ -167,8 +175,8 @@
 		
 		.bottom_wrapper .send_message {
 			width: 140px;
-			height: 50px;
-			display: inline-block;
+			padding: 2.8px;
+			display: block;
 			border-radius: 50px;
 			background-color: #a3d063;
 			border: 2px solid #a3d063;
@@ -197,7 +205,7 @@
 </head>
 
 <body>
-
+	<div class="body-overlay"></div>
 	<div class="chat_window">
 		<div class="top_menu">
 			<!--<div class="buttons">
@@ -213,8 +221,8 @@
 		<div class='row' style='margin: 5px 0px;'>
 			<div class='col-sm-8 text-left' '> 
 				<div class='received text-left ' >
-				Hi, My name is Compliance Bot. How can I help you?
-				<div class="time">5/19/2017, 7:11:12 PM</div>
+					Hi, My name is Compliance Bot. How can I help you?
+					<div class="time"></div>
 				</div>
 			</div>
 		</div>
@@ -230,6 +238,11 @@
 			<text style="font-size:27px;">SEND</text>
 		</div>
 	</div>
+	<!-- NPS Promoter -->
+	<div class="nps-promoter">
+		<iframe src="https://nps.w3ibm.mybluemix.net/widget/bnBzaWRfMjU0MTQ2ODY0OF84ODAzODIyODdfMjY2MjYyMTMwXzg2NTcyMDM5OF8yMTk4ODAzOTIxXy1fMjAxNy0wNS0yMlQwOTo0NDo0Ny4xMDNaXy1fQ29tcGxpYW5jZSBCb3Q=" style="position:relative"></iframe>
+	</div>
 </div>
+
 </body>
 </html>
